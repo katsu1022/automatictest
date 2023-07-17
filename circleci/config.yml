@@ -1,19 +1,12 @@
 version: 2.1
 
-orbs:
-  win: circleci/windows@5.0.0 # The Windows orb gives you everything you need to start using the Windows executor.
-
 jobs:
-  hello-job:
-  　build:
-    executor: win/server-2022
-
+  build: # name of your job
+    resource_class: 'windows.medium'
+    machine:
+      image: 'windows-server-2022-gui:current'
+      shell: 'powershell.exe -ExecutionPolicy Bypass'
     steps:
       # Commands are run in a Windows virtual machine environment
       - checkout
       - run: Write-Host 'Hello, Windows'
-
-workflows:
-  my-workflow:
-    jobs:
-      - hello-job
