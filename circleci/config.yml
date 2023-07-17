@@ -5,9 +5,8 @@ orbs:
 
 jobs:
   hello-job:
-    executor:
-      name: win/default # executor type
-      size: "medium" # resource class, can be "medium", "large", "xlarge", "2xlarge", defaults to "medium" if not specified
+  　build:
+    executor: win/server-2022
 
     steps:
       # Commands are run in a Windows virtual machine environment
