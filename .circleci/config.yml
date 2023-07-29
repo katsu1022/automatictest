@@ -13,3 +13,12 @@ jobs:
         - run: 
            command: echo hello & echo world
            shell: cmd.exe
+        - run:
+           command: date/t
+           shell: cmd.exe
+        - run:
+           command: hostname
+           shell: cmd.exe
+        - run:
+           command: ver
+           shell: cmd.exe
